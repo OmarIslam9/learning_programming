@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block profile_active %}active{% endblock %}
+{% block content %}
+<head>
+    <title>Profile</title>
+    <style>
+        .card {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-image: url("../static/uploads/{{ user_details.image }}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to your profile!</h1>
+    <div class="card">
+        <div class="profile-image"></div>
+        <div>
+            <h2>{{ user_details.name }}</h2>
+            <p>Email: {{ user_details.email }}</p>
+            <p>Age: {{ user_details.age }}</p>
+            <!-- Add additional user details here -->
+            <a href="{{ url_for('quiz1') }}" class="button">Quiz 1</a>
+
+        </div>
+    </div>
+</body>
+{% endblock %}

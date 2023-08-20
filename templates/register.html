@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="about">About Image:</label>
+        <input type="file" id="about" name="profile_photo" accept=".jpg, .jpeg, .png" required><br><br>
+
+        <label for="date_added">Date Added:</label>
+        <input type="date" id="date_added" name="date_added" required><br><br>
+
+        <label for="learned">Learned:</label>
+        <select id="learned" name="learned" required>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

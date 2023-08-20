@@ -1,0 +1,12 @@
+<!-- result.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Test Result</h2>
+    <p>Your test score: {{ score }}/4</p>
+    {% if score >= 3 %}
+        <p>Congratulations! You did a great job!</p>
+    {% else %}
+        <p>Oops! You may want to study a bit more and try again.</p>
+    {% endif %}
+{% endblock %}
